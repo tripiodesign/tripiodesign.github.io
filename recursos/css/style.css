@@ -22,7 +22,7 @@ body{
     position: fixed;
     display: inline-flex;
     padding: 7px 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .4);
 
 }
     .titulo{
@@ -30,7 +30,7 @@ body{
         transition: .3s;
         margin: auto 0;
         margin-left: 30px;
-        font-size: 1vw;
+        font-size:  16px;
     }
     .titulo a{
         text-decoration: none;
@@ -49,7 +49,7 @@ body{
 .menu{
     width: 50%;
     margin: auto 0;
-    font-size: 1.3vw;
+    font-size: 14px;
 }
 .menu ul{
     justify-content: space-evenly;
@@ -65,14 +65,14 @@ body{
         }
             .menu ul li:hover{
                 background-color: teal;
-                box-shadow: 3px 3px rgba(255, 255, 255, .1);
+                box-shadow: 3px 3px rgb(124, 121, 121);
                 transform: scale(1.1);
             }
             .menu ul li a{
                 display: block;
                 text-decoration: none;
                 color: white;
-                padding: 6px 8px;
+                padding: 6px;
             }
 /*Fin Estilo Menu*/
 
@@ -97,7 +97,7 @@ body{
         margin: 0 auto;
     }
         .seccion1 .header{
-            background-color: rgba(0, 0, 0, 0.901);
+            background-color: rgba(0, 0, 0, 0.6);
             width: 100%;
             transition: .3s;
             text-align: center;
@@ -154,95 +154,107 @@ body{
             margin: 5px 0;
         }
 
-
-
-
-
 footer{
     width: 100%;
     background-color: #202020;
     color: white;
-    margin-top: 45px;
     text-align: left;
+    margin-top: 45px;
 }
     .container_footer{
         width: 100%;
-        max-width: 1200px;
-        margin: auto;
+        max-width: 1500px;
     }
-    .parte1{
-        display: inline-flex;
-        justify-content: space-between;
-        padding-top: 40px;
-    }
-        .columna1{
-            max-width: 400px;
+        .parte1{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
         }
-            .columna1 h1{
-                font-size: 20px;
+            .columna1{
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 0 20px;
             }
-            .columna1 p{
-                font-size: 14px;
-                color: #c7c7c7;
-                margin-top: 10px;
+                .columna1 h1{
+                    font-size: 16px;
+                }
+                .columna1 p{
+                    font-size: 12px;
+                    color: #c7c7c7;
+                    margin-top: 10px;
+                }
+            .columna2{
+                max-width: 500px;
+                width: 80%;
+                padding: 0 20px;
             }
-        .columna2{
-            max-width: 400px;
-        }
-            .columna2 h1{
-                font-size: 20px;
-            }
-            .columna2 .row{
-                margin-top: 10px;
-                display: flex;
-            }
+                .columna2 h1{
+                    font-size: 16px;
+                }
+                .columna2 .row{
+                    margin-top: 10px;
+                    display: flex;
+                }
+                    .columna2 .row a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                        .columna2 .row b{
+                            color: teal;
+                        }
                 .columna2 .row img{
                     width: 24px;
                     height: 24spx;
                 }
                 .columna2 .row label{
-                    margin: auto;
+                        text-align: center;
+                        font-size: 12px;
+                        margin: auto 10px;
+                    }
+            .columna3{
+                width: 80%;
+                max-width: 500px;
+                padding-top: 0 20px;
+            }
+                .columna3 h1{
+                    font-size: 16px;
                 }
-        .columna3{
-            max-width: 400px;
+                .columna3 .row{
+                    margin-top: 10px;
+                    display: flex;
+                }
+                span{
+                    font-size: 20px;
+                    color: teal;
+                }
+                    .facebook{
+                        color: rgb(100, 100, 199);
+                    }
+                    .twitter{
+                        color: rgb(12, 145, 221);
+                    }
+                    .instagram{
+                        color: white;
+                        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                        border-radius: 5px;
+                    }
+                    .columna3 .row label{
+                        margin: auto 10px;
+                        width: 100%;
+                        font-size: 12px;
+
+                    }
+        .parte2{
+            width: 100%;
+            max-width: 1500px;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            background-color: teal;
+            font-size: 12px;
         }
-            .columna3 h1{
-                font-size: 20px;
+            .parte2 a{
+                text-decoration: none;
+                color: white;
             }
-            .columna3 .row{
-                margin-top: 10px;
-                display: flex;
-            }
-span{
-    font-size: 20px;
-    color: teal;
-}
-    .facebook{
-        color: rgb(54, 54, 230);
-    }
-    .twitter{
-        color: rgb(12, 145, 221);
-    }
-    .instagram{
-        color: white;
-        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-        border-radius: 5px;
-    }
-    .inicio{
-        
-    }
-    .columna3 .row label{
-        height: 24px;
-        margin: auto;
-
-    }
-
-
-.parte2{
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: teal;
-}

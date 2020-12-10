@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="recursos/css/style.css">
     <link rel="stylesheet" href="recursos/img/icomoon/style.css">
 
@@ -16,115 +19,113 @@
         <div class="titulo">
             <a href="#espacio"><h1>Northside Youth Soccer League</h1></a>
         </div>
-        <nav class="menu">
+        <div class="menu">
             <ul>
                 <li><a href="index.html" >Noticias</a></li>
-                <li><a href="about.html" >Acerca de NYSL</a></li>
+                <li><a href="about.html" >NYSL</a></li>
                 <li><a href="contact.html" >Contacto</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
-
-    <!-- <img src="recursos/img/design1_image1.jpg" alt="" class="portada"> -->
 
     <div class="espacio" id="espacio"></div>
 
     
     <div class="general"><!-- contenedor general -->
-        
-        <div class="seccion1">
-            
-            <div class="header" id="noticia1">
-                <a href="#noticia1"><h2 class="subtitulo1">Noticias de NYSL</h2></a>
+        <div class="seccion1">  
+            <div class="header" id="seccion1">
+                <a href="#seccion1"><h2 class="subtitulo1">Próximos Eventos</h2></a>
             </div>
 
-            <div class="contenido">
-                
-                <img src="recursos/img/nysl_logo.png" alt="" class="logo">
+            <div class="contenido">          
+                <div class="contenedor_logo">
+                    <img src="recursos/img/nysl_logo.png" alt="" class="logo">
+                </div>
 
                 <div class="subseccion1">
-                
-                    <h2>Próximos Eventos</h2>
-                    
+                    <h2>Calendario de eventos</h2>
+
                     <div class="articulo">
                         <h3>Agosto 4</h3>
-                        <p>Recaudación NYSL.</p>
+                        <p>Recaudación <b>NYSL</b>.</p>
                     </div>
         
-                    <div class="articulo art2">
+                    <div class="articulo">
                         <h3>Agosto 16</h3>
-                        <p>Inicio de temporada: Conocer a los equipos.</p>
+                        <p><b>Inicio de temporada:</b> Conocer a los equipos.</p>
                     </div>
                 
                     <div class="articulo">
                         <h3>Septiembre 1</h3>
-                        <p>Primer juego de la temporada. (Consultar el calendario del juego para obtener más información)</p>
+                        <p>Primer juego de la temporada. <b>(Consultar el <a href="">calendario</a> del juego para obtener más información)</b></p>
                     </div>
 
                 </div>
             </div>
-        </div>
-        
-        
+        </div>        
     </div>
 
-    <footer>
+    <div class="footer">
         <div class="container_footer">
             <div class="parte1">
-                <div class="columna1">
-                    <h1>Mas información de la compañía</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum provident architecto necessitatibus. Saepe eum rem expedita, dolores maxime hic neque quod, quas eos aperiam facilis ad illo. Possimus, facere ipsam?    </p>
+                <div class="columna">
+                    <h1>Más sobre la compañía</h1>
+                        <div class="row">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum provident architecto necessitatibus. Saepe eum rem expedita, dolores maxime hic neque quod, quas eos aperiam facilis ad illo. Possimus, facere ipsam?</p>
+                    </div>
                 </div>
         
-                <div class="columna2">
+                <div class="columna">
         
-                    <h1>Revisa nuestras redes sociales</h1>
+                    <h1>Nuestras Redes Sociales </h1>
         
-                    <div class="row">
-                        <span class="icon-facebook2 facebook"></span>
-                        <label><a href="#">¡Siguenos en <b>Facebook</b>!</a></label>
+                    <div class="row rrss">
+                        <label>
+                            <a href="#"><span class="icon-facebook2 facebook"></span><p>¡Siguenos en <b>Facebook</b>!</p></a>
+                        </label>
                     </div>
                     
                     <div class="row">
                         <span class="icon-instagram instagram"></span>
-                        <label><a href="#">¡Siguenos en <b>Instagram</b>!</a></label>
+                            <label><a href="#"><p>¡Siguenos en <b>Instagram</b>!</p></a>
+                        </label>
                     </div>
-                    
+
                     <div class="row">
                         <span class="icon-twitter twitter"></span>
-                        <label><a href="#">¡Siguenos en <b>Twitter</b>!</a></label>
+                        <label>
+                            <a href="#"><p>¡Siguenos en <b>Twitter</b>!</p></a>
+                        </label>
                     </div>
         
                 </div>
         
-                <div class="columna3">
+                <div class="columna">
                     <h1>Información de contacto</h1>
                     <div class="row">
                         <span class="icon-home3 inicio"></span>
-                        <label for=""><b>Av. Calle Equis #1111</b>, Ygriega, Santiago, Chile.</label>
+                        <label for="">Av. Calle Equis #1111, Ygriega, Santiago, Chile.</label>
                     </div>
                     <div class="row">
-                        <label for="">
-                            <span class="icon-phone telefono"></span>
-                            <b>(+56) 9 1234 5678</b>
-                        </label>
+                        <span class="icon-phone telefono"></span>
+                        <label for="">(+56) 9 1234 5678</label>
                     </div>
                     <div class="row">
                         <span class="icon-envelop correo"></span>
-                        <label for=""><a href="mailto:nysl@.chisoccer.org"><b>nysl@.chisoccer.org</b></a></label>
+                            <label for=""><a href="mailto:nysl@.chisoccer.org">nysl@.chisoccer.org</a></label>
                     </div>
                 </div>
             </div>
             <div class="parte2">
                 <div class="copyright">
-                    &#0169; 2020 Todos los derechos son reservados | <a href=""><b>NYSL</b></a>
+                    &#0169; 2020 Todos los derechos son reservados | <a href="">NYSL</a>
                 </div>
                 <div class="politica">
                     <a href="">Información de compañía</a> | <a href="">Privación y politica</a> | <a href="">Términos y condiciones</a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
         
     </body>
 </html>

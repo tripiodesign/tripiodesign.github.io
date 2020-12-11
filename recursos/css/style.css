@@ -15,22 +15,21 @@ body{
     background-size: cover;
     background-position: center;
     background-position-y: 10px;
-    -moz-background-size: cover;
-    -webkit-background-size: cover ;
-    -o-background-size: cover;
     color: black;
 }
 .encabezado{
     width: 100vw;
-    padding: 10px;
+    padding: 5px;
     z-index: 1000;
     position: fixed;
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     grid-template-columns: repeat(2, 50%);
     background-color: rgb(0, 0, 0);
 
 }
     .titulo{
+        max-width: 37vw;
         transition: .3s;
         margin: auto 10px;
     }
@@ -53,146 +52,140 @@ body{
     
     /*Estilo de Menu*/
 .menu{
-    margin: auto 20px auto auto ;
-    float: right;
+    max-width: 63vw;
+    /* background-color: red; */
+    margin: auto;
 }
-.menu ul{
-    list-style: none;
+    .menu ul{
+        list-style: none;
     }
-    .menu ul li{
-            float: left;
-            margin: auto 5px;
-            transition: .3s;
-            border-radius: 5px;
-        }
-            .menu ul li:hover{
-                background-color: teal;
-                box-shadow: 2px 2px rgb(182, 174, 174);
-                transform: scale(1.1);
-            }
-            .menu ul li a{
+        .menu ul li{
                 display: block;
+                float: left;
+                margin: auto;
+                padding: 4px;
+                transition: .3s;
+                font-size: .7em;
+        }
+        .menu ul li:hover{
+            background-color: teal;
+            box-shadow: 2px 2px darkslategray;
+            transform: scale(1.05);
+        }
+            .menu ul li a{
                 text-decoration: none;
-                color: #fff;
-                padding: 6px;
-                font-size: .65em;
+                color: white;
             }
-/*Fin Estilo Menu*/
 
-/*logo flotante*/
-/*fin logo flotante*/
+            
+/* Fin Estilo Menu */
 
-/*contenido de pagina*/
+/* logo flotante*/
+/* fin logo flotante */
+
+/* contenido de pagina */
 .espacio{
     width: 100%;
-    height: 92vh;
+    height: 92.4vh;
     max-height: 100%;
 }
-
+/* Fin del espacio */
     
 .general{ 
     width: 100%;
-    max-width: 100vw;
+    background-color: #0e3f3f;
 }
 /*titulo de seccion*/
     .seccion1{
-        width: 100%;
         max-width: 100vw;
-    }
+     }
         .seccion1 .header{
             background-color: rgb(0, 0, 0);
             width: 100%;
+            padding: 10px;
             transition: .3s;
             text-align: center;
         }
             .seccion1 .header:hover{
                 background-color:  #e3e3e3;
             }
-                .seccion1 .header a{
+                .subtitulo{
                     text-decoration: none;
                     color: #fff;
                     transition: .3s;
+                    font-size: 1.1em;
                 }
                     .seccion1 .header:hover a{
                         color: teal;
                     }
-                .seccion1 .header h2{
-                    padding: 10px;
-                    font-size: 1.5em;
-                }
-                
-/*Subseccion1*/
-.contenido{
-    width: 100%;
-    max-width: 1500px;
-    /* height: 100%;
-    max-height: 1500px; */
-    background-color: teal;
-    padding: 30px;
+
+.subseccion1{
+    width: 90%;
+    padding: 10px 0;
+    margin: auto;
     display: flex;
-    }
-    .contenedor_logo{
-        margin: auto 20px;
+    justify-content: space-between;
+}
+
+/* Estilo del logo */
+.logo{
+    max-width: 40%;
+    margin: auto;
+} 
+    .logo img{
         display: block;
-        }
-        .logo{
-            min-width: 150px;
-            width: 100%;
-            max-width: 600px;
-            box-shadow: 4px 4px darkslategray; 
-            border-radius: 50%; 
-            display: block;
-            }
-    .subseccion1{
-        margin: auto 0;
-        padding: 0 10px;
         width: 100%;
-        max-width: 900px;
+        padding: 0 5px 0 0;
     }
-        .subseccion1 h2{
-            background-color: black;
-            color: white;
-            padding:  20px;
-            text-align: right;
-            box-shadow: 3px 3px darkslategray;
+.articulo{
+    width: 60%;
+    margin: auto;
+    font-size: .75em;
+    color: white;
+    box-shadow: 3px 3px darkslategray;
+    /* border-radius: 10px 0 0 0; */
+} 
+    .h_2{
+        color: teal;
+        background-color: black;
+        box-shadow: 3px 3px darkslategray;
+        padding:5px 8%;
+        text-align: right;
+        font-size: .85em;
+    }
+    .parrafo{
+        padding: 10px;
+        font-weight: lighter;
+        font-size: .8em;
+        background-color: #30150f;
+    }
+        .parrafo h3{
+            background-color: teal;
+            color: black;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border-radius: 10px 0 10px 0;
+            box-shadow: 2px 2px gray;
         }
-            .articulo{
-                margin-top: 10px;
-                background-color: #e3e3e3;
-                padding: 20px;
-                box-shadow: 4px 4px darkslategray;
-                font-size: .7em; 
-            }
-                .articulo h3{
-                    background-color: teal;
-                    color: #f3f3f3;
-                    padding: 7px;
-                    border-radius: 20px 0 20px 0;
-                    box-shadow: 3px 3px darkslategray; 
-                }
-                .articulo p{
-                    margin-top: 10px;
-                }
-                .articulo a{
-                    text-decoration: none;
-                    color: black;
-                    transition: .3s;
-                }
-                    .articulo a:hover{
-                        color: teal;
-                    }
-        
+        .parrafo a{
+            color: white;
+        }
+
 /*Estilo de pie de pagina*/
 .footer{
     width: 100%;
-    height: 100%;
-    background-color: #202020;
+    background-color: #30150f;
     color: white;
     text-align: left;
-    display: inline-flex;
-    font-size: .5em;
+    display: flex;
+    font-size: .43em;
+
+    margin: 0;
+    padding: 0;
 }   
-    
+    .container_footer {
+        width: 100%;
+    }   
         .footer a{
             transition: .2s linear;
             text-decoration: none;
@@ -200,42 +193,41 @@ body{
         }
         .parte1{
             width: 100%;
-            max-width: 1500px;
             display: inline-flex;
-            padding: 20px;
         }
 /*Estilo general para filas*/
 /*Fin de estilo general de filas*/
-            .columna{
+            .parte1 .columna{
                 width: 100%;
-                max-width: 500px;
                 margin: 0 auto;
-                padding: 0 5px;
+                background-color: #202020;
             }
-                .columna h1{
-                    min-height: 48px;
+                .parte1 h1{
                     height: auto;
-                    padding: 13px 20%;
-                    background-color: teal;
-                    color: black;
-                    border-radius: 2px;
+                    padding: 5px 10%;
+                    font-size: 1.2em;
+                    background-color: black;
+                    color: teal;
                 }
-                .row{
+                .parte1 .row{
                     transition: .3s;
                     padding: 7px 10px;
                 }
-                    .row:hover{
+                    .parte1 .row:hover{
                         background-color: black;
                         color: white;
                     }
+                        .parte1.row:hover a{
+                           color: teal; 
+                        }
 
 
 /* Estilo de span / iconos */
 span{
-    font-size: 220%;
+    font-size: 120%;
     color: teal;
     float: left;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .facebook{
     color: rgb(100, 100, 199);
@@ -249,17 +241,42 @@ span{
     border-radius: 5px;
 }
 /* Fin de estilo span/ iconos*/
+
+/* Estilos de parte inferios de pie de pagina*/
         .parte2{
             width: 100%;
-            max-width: 1500px;
-            padding: 10px 50px;
-            display: inline-flex;
+            height: auto;
+            display: flex;
             justify-content: space-evenly;
-            background-color: teal;
+            background-color:  rgb(89, 146, 146);
+            color: black;
+            font-size: 1.3em;
         }
             .parte2 a{
                 text-decoration: none;
-                color: #c7c7c7;
+                color: black;
             }
+                .parte2 a:hover{
+                    color: white; 
+                }
 
-    
+            .copyright{
+                max-width: 70%;
+                padding: 3px 5px;
+            }
+                .copyright div{
+                        text-align: right;
+                        float: left;
+                        min-width: 150px;
+                    }
+            
+            .politica{
+                width: 30%;
+                text-align: center;
+                padding: 3px 5px;
+                /* background-color: purple; */
+            }
+                .politica div{
+                    float: left;
+                    margin: auto;
+                }

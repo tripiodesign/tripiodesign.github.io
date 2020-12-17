@@ -78,7 +78,7 @@ a{
             .menu ul li:hover{
                 background-color: #f2d1a8;
                 transform: scale(1.05);
-                transition: .3s;
+                transition: .4s;
                 border-radius: 5px;
                 border: 1px dashed #ebebeb;
                 box-shadow: 3px 3px #557669;
@@ -92,7 +92,7 @@ a{
                 border-color: #6647f2;
                 border-radius: 5px;
                 box-shadow: 2px 2px #525151;
-                transition: all .3s ease;
+                transition: all .25s linear;
             }
                 .menu ul li#reg:hover{
                     background-color: #6647f2;
@@ -103,9 +103,7 @@ a{
                 transition: none;
             }
                 .menu ul li#reg:hover a{
-                    font-family: 'east sea dokdo';
-                    font-weight: lighter;
-                    font-size: 1.45em;
+                    font-weight: bold;
                     transform:none ;
                 }
             

@@ -2,128 +2,217 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="recursos/css/style.css">
     <link rel="stylesheet" href="recursos/img/icomoon/style.css">
 
     <link rel="shortcut icon" href="recursos/img/icono.ico" />
-    <title>Noticias NYSL</title>
+    <title>Noticias | NYSL</title>
 </head>
 <body>
 
+<div class="cuerpo"><!-- Cuerpo de pagina -->
+
+<!-- Header de l la pagina -->
     <header class="encabezado">
         <div class="titulo">
-            <a href="#espacio"><h1>Northside Youth Soccer League</h1></a>
+            <a href="#"><h1>Northside Youth Soccer League</h1></a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="index.html" >Noticias</a></li>
-                <li><a href="about.html" >NYSL</a></li>
-                <li><a href="contact.html" >Contacto</a></li>
+                <li id="reg"><a href="inscription.html#ts1">Registro</a></li>
+                <li><a href="index.html">Novedades</a></li>
+                <li><a href="about.html#ts1">NYSL</a></li>
+                <li><a href="rules.html#ts1">Reglas</a></li>
+                <li><a href="contact.html#ts1">Contacto</a></li>
             </ul>
         </div>
     </header>
 
-    <div class="espacio" id="espacio"></div>
-
-    <div class="general"><!-- contenedor general -->
-        <div class="seccion1"><!-- Primera seccion-->
-            <div class="header" id="contacto">
-                <a href="#contacto" class="subtitulo"><h2>Nosotros</h2></a>
-            </div>
-            
-            <div class="subseccion1">
-                <div class="logo">
-                    <img src="recursos/img/nysl_logo.png" alt="">
-                </div>
-                    
-                    <div class="articulo">
-                        <div class="h_2"><h2>Calendario de eventos</h2></div>
-                        <div class="parrafo">
-                            <h3>Agosto 4</h3>
-                            <p>Recaudación <b>NYSL</b>.</p>
-                        </div>
-                        
-                        <div class="parrafo">
-                            <h3>Agosto 16</h3>
-                            <p>Inicio de temporada: Conocer a los equipos.</p>
-                        </div>
-    
-                        <div class="parrafo">
-                            <h3>Septiembre 1</h3>
-                            <p>Primer juego de la temporada. (Consultar el <a href="">calendario</a> del juego para obtener más información)</p>
-                        </div>
-                    </div>
-            </div>
-        </div>  
+<!-- Portada de pagina-->
+    <div class="portada" id="portada">
+        <a href="#seccion1"><button id="boton1"><span class="icon-arrow-down2"></span><!-- Eventos --></button></a>
+        <div class="titulo-seccion" id="ts1"><!-- Titulo de seccion -->
+            <a href="#ts1"><h2>PROXIMOS EVENTOS</h2></a>            
+        </div> 
     </div>
 
-    <div class="footer">
-        <div class="container_footer">
-            <div class="parte1">
-                <div class="columna">
-                    <h1>Más sobre la compañía</h1>
-                        <div class="row">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum provident architecto necessitatibus. Saepe eum rem expedita, dolores maxime hic neque quod, quas eos aperiam facilis ad illo. Possimus, facere ipsam?</p>
-                    </div>
-                </div>
-        
-                <div class="columna">
-        
-                    <h1>Nuestras Redes Sociales </h1>
-        
-                    <div class="row rrss">
-                        <label>
-                            <a href="#"><span class="icon-facebook2 facebook"></span><p>¡Siguenos en <b>Facebook</b>!</p></a>
-                        </label>
-                    </div>
-                    
-                    <div class="row">
-                        <span class="icon-instagram instagram"></span>
-                            <label><a href="#"><p>¡Siguenos en <b>Instagram</b>!</p></a>
-                        </label>
-                    </div>
+<!-- inicio del contenido -->
+    <div class="seccion sec-index" id="seccion1">  
+        <div class="caja-logo">
+            <img src="recursos/img/nysl_logo.png" alt=""><!-- Logo-->
+        </div>
 
-                    <div class="row">
-                        <span class="icon-twitter twitter"></span>
-                        <label>
-                            <a href="#"><p>¡Siguenos en <b>Twitter</b>!</p></a>
-                        </label>
-                    </div>
-        
+        <div class="subseccion subsec-index" id="subseccion1"><!-- primera subseccion-->
+            <div class="articulos">
+                <h2>Eventos</h2>
+
+                <div class="articulo">
+                    <h3>Agosto 4</h3>
+                    <p>Recaudación <b>NYSL</b>.</p>
                 </div>
-        
-                <div class="columna">
-                    <h1>Información de contacto</h1>
-                    <div class="row">
-                        <span class="icon-home3 inicio"></span>
-                        <p>Av. Calle Equis #1111, Ygriega, Santiago, Chile.</p>
-                    </div>
-                    <div class="row">
-                        <span class="icon-phone telefono"></span>
-                        <p>(+56) 9 1234 5678</p>
-                    </div>
-                    <div class="row">
-                        <span class="icon-envelop correo"></span>
-                        <p><a href="mailto:nysl@.chisoccer.org">nysl@.chisoccer.org</a></p>
-                    </div>
+                
+                <div class="articulo">
+                    <h3>Agosto 16</h3>
+                    <p>Inicio de temporada: Conocer a los equipos.</p>
                 </div>
-            </div>
-            <div class="parte2">
-                <div class="copyright">
-                    <div for="">&#0169; 2020 Todos los derechos son reservados | <a href="">NYSL</a></div>
-                </div>
-                <div class="politica">
-                    <div for=""><a href="">| Información de compañía | </a></div>                    
-                    <div for=""><a href="">| Privación y politica | </a></div>
-                    <div for=""><a href="">| Términos y condiciones | </a></div>
+
+                <div class="articulo">
+                    <h3>Septiembre 1</h3>
+                    <p>Primer juego de la temporada. (Consultar el <a href="#seccion2">calendario</a> del juego para obtener más información)</p>
                 </div>
             </div>
         </div>
+        <a href="#ts2"><button id="boton1"><span class="icon-arrow-down2"></span><!-- Fechas --></button></a>
+        <div class="titulo-seccion" id="ts2"><!-- Titulo de seccion -->
+            <a href="#ts2"><h2>CALENDARIO DEPORTIVO</h2></a>            
+        </div>    
     </div>
-        
+
+    <div class="seccion" id="seccion2"><!-- segunda seccion -->          
+            <div class="subseccion" id="subseccion2"><!-- seginda subseccion-->
+                <div class="calendario">
+                    <h1>HORARIO OTOÑO</h1>
+                    <h2>Juegos de la temporada</h2>
+                    <table>
+                        <tr class="head">
+                            <th rowspan="">SEPTIEMBRE</th>
+                            <th rowspan="">EQUIPOS</th>
+                            <th rowspan="">UBICACIÓN</th>
+                            <th rowspan="">HORARIO</th>
+                            <th rowspan="">MAPA</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">01</td>
+                            <td rowspan="">U1 y U4</td>
+                            <td rowspan="">AJ Katzenmaier</td>
+                            <td rowspan="">9:30 A.M</td>
+                            <td span=""><iframe id="mapa1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.780884857931!2d-87.86499554948391!3d42.32587204515131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f932fbc6ba7cd%3A0xcf2bbe275c6da815!2sKatzenmaier%20School!5e0!3m2!1ses-419!2scl!4v1608168927374!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="">U3 y U2</td>
+                            <td rowspan="">Greenbay</td>
+                            <td rowspan="">1:00 PM</td>
+                            <td rowspan=""><iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.010826053151!2d-87.87105824948405!3d42.32096784546074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f933bce5af881%3A0x740a7a7d548adce1!2sGreen%20Bay%20School%20(Pre-K)!5e0!3m2!1ses-419!2scl!4v1608169125736!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+                        </tr>  
+                        <tr>
+                            <td rowspan="2">08</td>
+                            <td rowspan="">U5 y U6</td>
+                            <td rowspan="">Howard A Yeager</td>
+                            <td rowspan="">9:30 A.M</td>
+                            <td colspan=""><iframe id="mapa3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.2698766785716!2d-87.85607514948428!3d42.31544224580943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac26b07c5%3A0x8b51fa5d6efe771a!2sHoward%20A.%20Yeager%20School%20(PREK-K)!5e0!3m2!1ses-419!2scl!4v1608169156963!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="">U6 y U1</td>
+                            <td rowspan="">Marjorie P Hart</td>
+                            <td rowspan="">1:00 PM</td>
+                            <td rowspan=""><iframe id="mapa4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.289653648341!2d-87.64816674949776!3d41.929626870065974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2637f9d7%3A0xdbff5d5dfcfcfa35!2sMarjorie%20P%20Hart%20Elementary!5e0!3m2!1ses-419!2scl!4v1608169198730!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">15</td>
+                            <td rowspan="">U2 y U4</td>
+                            <td rowspan="2">North AJ Katzenmaier</td>
+                            <td rowspan="">9:30 A.M</td>                            
+                            <td rowspan="2"><iframe id="mapa5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.780884857931!2d-87.86499554948391!3d42.32587204515131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f932fbc6ba7cd%3A0xcf2bbe275c6da815!2sKatzenmaier%20School!5e0!3m2!1ses-419!2scl!4v1608169237704!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="">U3 y U5</td>
+                            <td rowspan="">1:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">22</td>
+                            <td rowspan="">U1 y U3</td>
+                            <td rowspan="2">South Howard A Yeager</td>
+                            <td rowspan="">9:30 A.M</td>
+                            <td rowspan="2"><iframe id="mapa6" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.5856648825697!2d-87.66511554949798!3d41.92326497046437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f852467%3A0xb6cb22b2f0358874!2sHoward%20A%20Yeager%20Elementary!5e0!3m2!1ses-419!2scl!4v1608169301687!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="">U2 y U6</td>
+                            <td rowspan="">1:00 PM</td>
+                            </tr>
+                        <tr>
+                            <td rowspan="1">29</td>
+                            <td rowspan="">U4 y U5</td>
+                            <td rowspan="1">Greenbay</td>
+                            <td rowspan="">9:30 A.M</td>
+                            <td rowspan="2"><iframe id="mapa7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.010826053151!2d-87.87105824948405!3d42.32096784546074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f933bce5af881%3A0x740a7a7d548adce1!2sGreen%20Bay%20School%20(Pre-K)!5e0!3m2!1ses-419!2scl!4v1608169125736!5m2!1ses-419!2scl" width="300" height="80" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+                            </tr>
+                    </table>
+
+                    <!-- <iframe id="prueba" src="" frameborder="0">
+                        hola
+                    </iframe> 
+
+                -->
+                </div>
+
+
+
+
+            </div>
+            <a href="#portada"><button id="boton3"><span class="icon-arrow-up2"></span><!-- Portada --></button></a>
+    </div>
+
+<!-- Pie de pagina -->
+    <footer class="footer">
+        <div class="parte1">
+            <!-- <div class="columna">
+                <h1>Más sobre NYSL</h1>
+                <div class="fila">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum provident architecto necessitatibus. Saepe eum rem expedita, dolores maxime hic neque quod, quas eos aperiam facilis ad illo. Possimus, facere ipsam?</p>
+                </div>
+            </div> -->
+    
+            <div class="columna" id="rrss">
+                <h1>Redes Sociales </h1>
+                <div class="fila">
+                    <a href="#"><span class="icon-facebook2 facebook"></span>Siguenos en <b>Facebook</b>!</a>
+                </div>
+                
+                <div class="fila">
+                    <a href="#"><span class="icon-instagram instagram"></span>¡Siguenos en <b>Instagram</b>!</a>
+                </div>
+
+                <div class="fila">
+                    <a href="#"><span class="icon-twitter twitter"></span>¡Siguenos en <b>Twitter</b>!</a>
+                </div>
+    
+            </div>
+    
+            <div class="columna">
+                <h1>Contacto</h1>
+                <div class="fila">
+                    <a href=""><span class="icon-home3 inicio"></span>Av. Equis #1111, Ygriega, Santiago, Chile.</a>
+                </div>
+                <div class="fila">
+                    <a href="tel:+56912345678"><span class="icon-phone telefono"></span>(+56) 9 1234 5678</a>
+                </div>
+                <div class="fila">
+                    <a href="mailto:nysl@.chisoccer.org"><span class="icon-envelop correo"></span>nysl@.chisoccer.org</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="parte2">
+            <div class="columna" id="politica">
+                <p><a href="about.html#ts1">| Información de compañía |</a></p>
+                <p><a href="rules.html#ts1">| Política y reglas de juego |</a></p>
+                <!-- <p><a href="">Términos y condiciones </a></p> -->
+            </div>
+            <div class="columna" id="copyright">
+                <p>&#0169; 2020 Todos los derechos son reservados | <a href="index.html">NYSL</a></p>
+            </div>
+        </div>
+    </footer>
+</div><!-- Cuerpo de pagina-->
+
+
     </body>
 </html>

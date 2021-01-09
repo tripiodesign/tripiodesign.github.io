@@ -36,12 +36,12 @@
           </div>
           
           <div class="col-8 my-auto">
-            <a href="index.html" class="btn btn-m btn-outline-success mx-2 active" >Pagina de Inicio</a>
-            <a href="#subMenu1" class="btn btn-sm btn-outline-none mx-2 " style="color: rgb(192, 188, 188);" data-toggle="collapse">Datos del Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+            <a href="index.html" class="btn btn-sm btn-outline-none mx-2" style="color: rgb(192, 188, 188);">Pagina de Inicio</a>
+            <a href="#subMenu1" class="btn btn-outline-success mx-2 active" data-toggle="collapse">Datos del Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
           </div>
 
           <div class="col-2 my-auto d-flex" id="mail">
-            <a href="mailto:info@tgif.net" class="btn-outline-success rounded-0 mx-auto p-2" style="font-size: .75em;"><span class="icon-envelop"></span> info@tgif.net</a>
+            <a href="mailto:info@tgif.net"  class="btn-outline-success rounded-0 mx-auto p-2" style="font-size: .75em;"><span class="icon-envelop"></span> info@tgif.net</a>
           </div>
           
           <div id="subMenu1" class="collapse px-4 py-2 row" style="border-bottom: 1px solid gray;">
@@ -50,7 +50,7 @@
             </div>
             
             <div class="col-6">
-              <a href="house-started-data.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Datos de la Camara</a>
+              <a href="house-started-data.html" class="btn btn-m btn-outline-success rounded-0 w-100 active" >Datos de la Camara</a>
             </div>
           </div>
         </nav>
@@ -59,38 +59,37 @@
     <div style="height: 150px;"></div>
 
     <main class="container bg-light p-3">
-      <div class="">
-          <a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment" class="nav-link btn btn-outline-success">https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment</a>
-      </div>
-        <br>
-      <div class="container">
-        <div class="d-flex justify-content-center">
-            <div class="w-75">
-                <p class="h2">ACERCA DE NOSOTROS</p>
-                <p>La apertura, la responsabilidad y la honestidad definen la transparencia del gobierno. En una sociedad libre, la transparencia es la obligación del gobierno de compartir información con los ciudadanos. Está en el centro de cómo los ciudadanos hacen responsables a sus funcionarios públicos. Aquí en TGIF creemos que el gobierno debe ser transparente.</p>
-                <p>Los gobiernos existen para servir a la gente. La información sobre cómo los funcionarios llevan a cabo los negocios públicos y gastan el dinero de los contribuyentes debe estar disponible y fácilmente entendida. Esta transparencia permite una gobernanza buena y justa. La transparencia promueve la rendición de cuentas y brinda información a los ciudadanos sobre lo que está haciendo su gobierno.</p>
-                <p>También creemos que el gobierno debe ser participativo. La participación pública aumenta la eficacia del gobierno y mejora la calidad de sus decisiones. El conocimiento está muy disperso en la sociedad y los funcionarios públicos se benefician de tener acceso a ese conocimiento disperso. Lo invitamos a utilizar nuestro sitio para participar activamente en el gobierno estadounidense.</p>
-                <p>TGIF trabaja para divulgar información en formas que el público pueda encontrar y usar fácilmente. Solicitamos comentarios del público para identificar la información de mayor utilidad para el público.</p>
+      <div class="container bg-light">
+        <p class="h2">CONGRESO</p>
+        <p class="p">El poder principal de la Cámara es aprobar leyes federales que afecten a todo el país, aunque sus proyectos de ley también deben ser aprobados por el Senado y acordados por el presidente de los Estados Unidos antes de convertirse en ley (a menos que tanto la Cámara como el Senado vuelvan a aprobar la legislación). con una mayoría de dos tercios en cada cámara). La Cámara tiene algunos poderes exclusivos: el poder de iniciar proyectos de ley de ingresos, acusar a los funcionarios (los funcionarios acusados ​​son posteriormente juzgados en el Senado) y elegir al presidente de los Estados Unidos en caso de que no haya mayoría en el Colegio Electoral.</p>
+        <p class="p">Cada estado de EE. UU. Está representado en la Cámara en proporción a su población medida en el censo, pero cada estado tiene derecho a al menos un representante.</p>      </div>
+      
+      <div class="json" id="resultado">
+        <!-- <div class="d-flex justify-content-end">
+          <div class="d-flex" id="estadoResult";">
+          </div>
+        </div> -->
+        
+        <div class="accordion accordion-flush" id="acordeonUno">
+          <div class="accordion-item">
+            <div class="accordion-header" id="flushHead-uno">
+              <a href="#flushBody-Uno" class="accordion-button text-success bg-dark" data-toggle="collapse">
+                <p class="btn justify-content-end bg-success text-light my-2" id="estado"></p>
+                <p class="m-auto">Miembros de la Camara</p>
+              </a>
             </div>
-    
-            <div class="m-auto">
-                <img src="assets/img/imagen1-removebg-preview.png" alt="Search">
+            <div class="accordion-body collapse" id="flushBody-Uno">
+              <table class="table table-dark mx-auto my-3" id="house-data" style="font-size: .85em;">
+                <tr>
+                  <th class="bg-success text-light" id="thNombre">Nombre Completo</th>
+                  <th class="bg-success text-light" id="thFiesta">Fiesta</th>
+                  <th class="bg-success text-light" id="thEstado">Estado</th>
+                  <th class="bg-success text-light" id="thAntiguedad">Antigüedad</th>
+                  <th class="bg-success text-light" id="thPorcentaje">% Votos + % Añadido</th>
+                </tr>
+              </table>
             </div>
-        </div>
-        <div class="accordion accordion-flush" id="acordeonDos">
-            <div class="accordion-item">
-                <div class="accordion-header" id="flushHead-dos">
-                    <a href="#flushBody-Dos" class="accordion-button text-success bg-dark h3" data-toggle="collapse" style="font-weight: bold;">• • •  Leer más</a>
-                </div>
-
-                <div class="accordion-body collapse" id="flushBody-Dos">
-                    <p class="h3">ANTECEDENTES DE LA TRANSPARENCIA GUBERNAMENTAL</p>
-                    <p>En Occidente, la idea de que el gobierno debería estar abierto al escrutinio público y susceptible a la opinión pública se remonta al menos a la época de la Ilustración, cuando muchos filósofos atacaron la doctrina absolutista del secreto de Estado, una parte fundamental de su proyecto intelectual. . La aprobación de instrumentos legislativos formales con este fin también se puede rastrear hasta este momento con Suecia, por ejemplo, (que entonces incluía a Finlandia como un territorio gobernado por Suecia) promulgando leyes de libertad de prensa como parte de su constitución (Ley de Libertad de Prensa, 1766). Este enfoque, y el de los philosophes en general, está fuertemente relacionado con la historiografía reciente sobre la esfera pública del siglo XVIII.</p>
-                    <p>Influenciada por el pensamiento ilustrado, las revoluciones en América (1776) y Francia (1789), la libertad de prensa consagró disposiciones y requisitos para la contabilidad presupuestaria pública y la libertad de prensa en artículos constitucionales. En el siglo XIX, varios políticos y escritores liberales eminentes se opusieron enérgicamente a los intentos de los estadistas metterniqueos de refutar estas medidas, entre los que destacan Bentham, Mill y Acton.</p>
-                    <p>En general, se considera que el gobierno abierto es un sello distintivo de la práctica democrática contemporánea y, a menudo, está vinculado a la aprobación de leyes sobre libertad de información. Los países escandinavos afirman haber adoptado la primera legislación sobre libertad de información, que remonta los orígenes de sus disposiciones modernas al siglo XVIII y Finlandia continúa con la presunción de apertura después de obtener la independencia en 1917, aprobando su Ley de publicidad de documentos oficiales en 1951 (reemplazada por nueva legislación en 1999).</p>
-                    <p>Estados Unidos aprobó su Ley de Libertad de Información (FOIA) en 1966, las FOIA, las leyes de acceso a la información (AIA) o leyes equivalentes se aprobaron en Dinamarca y Noruega en 1970.</p>
-                </div>
-            </div>
+          </div>
         </div>
       </div>
     </main>

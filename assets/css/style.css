@@ -1,0 +1,56 @@
+*{
+    transition: all .4s ease;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: 'Raleway', sans-serif;
+}
+.btn:hover{
+    border: 1px solid;
+    transition: .4s ease;
+}
+.table#senate-data, .table#house-data{
+    text-align: center;
+}
+
+
+footer{
+    font-size: .75em;
+}
+#infoFooter{
+    background-color: gray;
+    color:rgb(230, 230, 216);
+}
+#rrss{
+    transition: all .5s ease;
+}
+#rrss{
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+}
+#rrss:hover{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+#datos{
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    /* font-family: 'Montserrat', sans-serif; */
+    transition: all .3s ease;
+    color: darkgray;
+    font-size: 1em;
+}
+#datos:hover{
+    border-bottom: 1px solid lightgray;
+    font-weight: bold;
+    color: mediumspringgreen;
+    font-size: 1.2;
+    transform: scale(1.06);
+}
+#rrss span{
+    font-size: 40px;
+}

@@ -32,8 +32,7 @@ if (datosSenado.status == 'OK') {
             ancore.attr('href', datosSenado.results[0].members[i].url).text(nombreCompletoUno);
 
             tdNombreUno.append(ancore);
-            ancore.addClass('text-light');
-
+            ancore.addClass('text-info');
             
             trUno.append(tdNombreUno);
             trUno.append(tdFiestaUno);

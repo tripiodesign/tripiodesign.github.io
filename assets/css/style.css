@@ -52,3 +52,7 @@ footer{
     font-size: 1.2;
     transform: scale(1.06);
 }
+#mail a{
+    font-style: italic;
+    font-weight: bold;
+}

@@ -30,30 +30,41 @@
     <div class="container-fluid" id="particles-js" style="background-color: black; min-height: 100vh; position: fixed; z-index: -10;"></div>
 
     <header class="fixed-top">
-        <nav class="row bg-dark">
-          <div class="col-2">
-            <a href="index.html" class="navbar-brand"><img class="mx-auto" style="max-width: 70px;" src="assets/img/logo2-removebg-preview.png" alt="TGIF"></a>
+      <nav class="row bg-dark">
+        <div class="col-2">
+          <a href="index.html" class="navbar-brand"><img class="mx-auto" style="max-width: 70px;" src="assets/img/logo2-removebg-preview.png" alt="TGIF"></a>
+        </div>
+        
+        <div class="col-8 my-auto">
+          <a href="index.html" class="btn btn-sm btn-outline-none mx-2" style="color: rgb(192, 188, 188);"><span class="icon-house_siding" style="font-size: 24px;"></span></a>
+          <a href="#subMenu1" class="btn btn-sm btn-outline-success mx-2 active" data-toggle="collapse">Datos del Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+          <a href="#subMenu2" class="btn btn-sm btn-outline-none mx-2" style="color: rgb(192, 188, 188);" data-toggle="collapse">Asistencia <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+        </div>
+
+        <div class="col-2 my-auto d-flex" id="mail">
+          <a href="mailto:info@tgif.net" class="btn-outline-info rounded-0 mx-auto p-2" style="font-size: .75em;"><span class="icon-envelop"></span> info@tgif.net</a>
+        </div>
+        
+        <div id="subMenu1" class="collapse px-4 py-2 row" style="border-bottom: 1px solid gray;">
+          <div class="col-6 my-auto">
+            <a href="senate-started-data.html" class="btn btn-sm btn-outline-none mx-2 w-100" style="color: rgb(192, 188, 188);">Datos del Senado</a>
           </div>
           
-          <div class="col-8 my-auto">
-            <a href="index.html" class="btn btn-sm btn-outline-none mx-2" style="color: rgb(192, 188, 188);">Pagina de Inicio</a>
-            <a href="#subMenu1" class="btn btn-outline-success mx-2 active" data-toggle="collapse">Datos del Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+          <div class="col-6 my-auto">
+            <a href="house-started-data.html" class="btn btn-m btn-outline-success mx-2 w-100 active">Datos de la Camara</a>
+          </div>
+        </div>
+        
+        <div id="subMenu2" class="collapse px-4 py-2 row" style="border-bottom: 1px solid gray;">
+          <div class="col-6 my-auto">
+            <a href="senate-attendance-page.html" class="btn btn-sm btn-outlone-none w-100" style="color: rgb(192, 188, 188);">Asistencia del Senado</a>
           </div>
 
-          <div class="col-2 my-auto d-flex" id="mail">
-            <a href="mailto:info@tgif.net"  class="btn-outline-info rounded-0 mx-auto p-2" style="font-size: .75em;"><span class="icon-envelop"></span> info@tgif.net</a>
+          <div class="col-6 my-auto">
+            <a href="house-attendance-page.html" class="btn btn-sm btn-outlone-none w-100" style="color: rgb(192, 188, 188);">Asistencia de la Camara</a>
           </div>
-          
-          <div id="subMenu1" class="collapse px-4 py-2 row" style="border-bottom: 1px solid gray;">
-            <div class="col-6">
-              <a href="senate-started-data.html" class="btn btn-sm btn-outline-none w-100 " style="color: rgb(192, 188, 188);">Datos del Senado</a>
-            </div>
-            
-            <div class="col-6">
-              <a href="house-started-data.html" class="btn btn-m btn-outline-success rounded-0 w-100 active" >Datos de la Camara</a>
-            </div>
-          </div>
-        </nav>
+        </div>
+      </nav>
     </header>
 
     <div style="height: 150px;"></div>
@@ -82,7 +93,7 @@
               <table class="table table-dark mx-auto my-3" id="house-data" style="font-size: .85em;">
                 <tr>
                   <th class="bg-success text-light" id="thNombre">Nombre Completo</th>
-                  <th class="bg-success text-light" id="thFiesta">Fiesta</th>
+                  <th class="bg-success text-light" id="thFiesta">partido</th>
                   <th class="bg-success text-light" id="thEstado">Estado</th>
                   <th class="bg-success text-light" id="thAntiguedad">Antigüedad</th>
                   <th class="bg-success text-light" id="thPorcentaje">% Votos + % Añadido</th>

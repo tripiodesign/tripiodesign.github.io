@@ -5057,7 +5057,7 @@ var datosSenado = {
 
 var miembros = datosSenado.results[0].members;
 
-function statsPartido() {
+function asistParty() {
   // promedio de votos por partido
   var contRep = 0;
   var contDem = 0;
@@ -5094,15 +5094,15 @@ function statsPartido() {
   var pctVotosI = ((votosInd * 100) / totalVotos).toFixed(3);
   
   
-  $('#tdMemRep').text(contRep);
-  $('#tdVotRep').text(pctVotosR + '%');
-  $('#tdMemDem').text(contDem);
-  $('#tdVotDem').text(pctVotosD + '%');
-  $('#tdMemInd').text(contInd);
-  $('#tdVotInd').text(pctVotosI + '%');
+  $('#tdMemRep').text(contRep).addClass('text-center');
+  $('#tdVotRep').text(pctVotosR + '%').addClass('text-center');
+  $('#tdMemDem').text(contDem).addClass('text-center');
+  $('#tdVotDem').text(pctVotosD + '%').addClass('text-center');
+  $('#tdMemInd').text(contInd).addClass('text-center');
+  $('#tdVotInd').text(pctVotosI + '%').addClass('text-center');
 }
 // console.log('Votos por partido');
-statsPartido();
+asistParty();
 
 // funcion para los mas 
 function compromiso() {
@@ -5140,10 +5140,10 @@ function compromiso() {
     ancore.addClass('text-info');
 
     var tdVotosMas = $('<td>');
-    tdVotosMas.text(arrMasC[i].missed_votes);
+    tdVotosMas.text(arrMasC[i].missed_votes).addClass('text-center');
 
     var tdPctMas = $('<td>');
-    tdPctMas.text(arrMasC[i].missed_votes_pct + '%');
+    tdPctMas.text(arrMasC[i].missed_votes_pct + '%').addClass('text-center');
 
     tRowMas.append(tdNombreMas);
     tRowMas.append(tdVotosMas);
@@ -5157,8 +5157,8 @@ function compromiso() {
   }
   
   $('#ttMas1').text('Nombre');
-  $('#ttMas2').text('Votos Perdidos');
-  $('#ttMas3').text('% Perdida');
+  $('#ttMas2').text('Votos Perdidos').addClass('text-center');
+  $('#ttMas3').text('% Perdida').addClass('text-center');
 
 
   // Menos comprometidos
@@ -5177,10 +5177,10 @@ function compromiso() {
     ancore.addClass('text-info');
 
     var tdVotosMenos = $('<td>');
-    tdVotosMenos.text(arrMenosC[i].missed_votes);
+    tdVotosMenos.text(arrMenosC[i].missed_votes).addClass('text-center');
 
     var tdPctMenos = $('<td>');
-    tdPctMenos.text(arrMenosC[i].missed_votes_pct + '%');
+    tdPctMenos.text(arrMenosC[i].missed_votes_pct + '%').addClass('text-center');
 
     tRowMenos.append(tdNombreMenos);
     tRowMenos.append(tdVotosMenos);
@@ -5194,8 +5194,110 @@ function compromiso() {
   }
   
   $('#ttMenos1').text('Nombre');
-  $('#ttMenos2').text('Votos Perdidos');
-  $('#ttMenos3').text('% Perdida');
+  $('#ttMenos2').text('Votos Perdidos').addClass('text-center');
+  $('#ttMenos3').text('% Perdida').addClass('text-center');
 }
 
 compromiso();
+
+
+
+// JS pagina Loyalty Senado
+
+// funcion para los mas Leales
+function lealtad() {
+
+  function ascendente(a, b){
+    return a.votes_with_party_pct - b.votes_with_party_pct;
+  }
+  //y de mayor a menor
+  function descendente(a, b){
+    return b.votes_with_party_pct - a.votes_with_party_pct;
+  }
+
+  // rango a mostrar
+  var range10 = ((miembros.length * 10) / 100);
+
+  var arrMasL = miembros.sort(ascendente).slice(0, range10);
+  console.log('mas comprometidos ' + arrMasL.length);
+
+  var arrMenosL = miembros.sort(descendente).slice(0, range10);
+  console.log('menos comprometidos ' + arrMenosL.length);
+
+  // Mas comprometidos
+  var tbMasLeales = $('#tbMasLeales');
+
+  for ( i = 0; i < arrMasL.length; i++) {
+    var nameMasL = arrMasL[i].first_name + " " + arrMasL[i].last_name;
+    var ancore = $('<a>');
+    ancore.attr('href', arrMasL[i].url).text(nameMasL);
+
+    
+    var tRowMas = $('<tr>');
+
+    var tdNombreMas = $('<td>');
+    tdNombreMas.append(ancore);
+    ancore.addClass('text-info');
+
+    var tdVotosMas = $('<td>');
+    tdVotosMas.text(arrMasL[i].missed_votes).addClass('text-center');
+
+    var tdPctMas = $('<td>');
+    tdPctMas.text(arrMasL[i].missed_votes_pct + '%').addClass('text-center');
+
+    tRowMas.append(tdNombreMas);
+    tRowMas.append(tdVotosMas);
+    tRowMas.append(tdPctMas);
+
+    $('#rowTxtMasL').remove();
+    // $('#tdMasL1').remove();
+    // $('#tdMasL2').remove();
+    // $('#tdMasL3').remove();
+
+    tbMasLeales.append(tRowMas);
+  }
+  
+  $('#ttMasL1').text('Nombre');
+  $('#ttMasL2').text('Votos Perdidos').addClass('text-center');
+  $('#ttMasL3').text('% Perdida').addClass('text-center');
+
+
+  // Menos comprometidos
+  var tbMenosLeales = $('#tbMenosLeales');
+
+  for ( i = 0; i < arrMenosL.length; i++) {
+    var nameMenosL = arrMenosL[i].first_name + " " + arrMenosL[i].last_name;
+    var ancore = $('<a>');
+    ancore.attr('href', arrMenosL[i].url).text(nameMenosL);
+
+    
+    var tRowMenos = $('<tr>');
+
+    var tdNombreMenos = $('<td>');
+    tdNombreMenos.append(ancore);
+    ancore.addClass('text-info');
+
+    var tdVotosMenos = $('<td>');
+    tdVotosMenos.text(arrMenosL[i].missed_votes).addClass('text-center');
+
+    var tdPctMenos = $('<td>');
+    tdPctMenos.text(arrMenosL[i].missed_votes_pct + '%').addClass('text-center');
+
+    tRowMenos.append(tdNombreMenos);
+    tRowMenos.append(tdVotosMenos);
+    tRowMenos.append(tdPctMenos);
+
+    $('#rowTxtMenosL').remove()
+    // $('#tdMenosL1').remove();
+    // $('#tdMenosL2').remove();
+    // $('#tdMenosL3').remove();
+
+    tbMenosLeales.append(tRowMenos);
+  }
+  
+  $('#ttMenos1').text('Nombre');
+  $('#ttMenos2').text('Votos Perdidos').addClass('text-center');
+  $('#ttMenos3').text('% Perdida').addClass('text-center');
+}
+
+lealtad();

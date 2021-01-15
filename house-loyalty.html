@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
 
     <link rel="icon" type="image/ico" href="assets/img/icono-removebg-preview.ico" />
-    <title>SENADO | TGIF</title>
+    <title>LEALTAD | CAMARA | TGIF</title>
 </head>
 <body>
     <div class="container-fluid" id="particles-js" style="background-color: black; min-height: 100vh; position: fixed; z-index: -10;"></div>
@@ -48,24 +48,23 @@
   
           <div class="collapse navbar-collapse col-md" id="menuBar">
             <a href="index.html" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);"><span class="icon-house_siding" style="font-size: 24px;"></span></a>
-            <a href="#subMenu1" class="btn btn-m btn-outline-success mx-auto col-12 col-md-2 active" data-toggle="collapse">Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+            <a href="#subMenu1" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);" data-toggle="collapse">Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
             <a href="#subMenu2" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);" data-toggle="collapse">Asistencia <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
-            <a href="#subMenu3" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);" data-toggle="collapse">Lealtad <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+            <a href="#subMenu3" class="btn btn-m btn-outline-success mx-auto col-12 col-md-2 py-3 active" data-toggle="collapse">Lealtad <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
           </div>
         </div>
 
         <div class="bg-secondary"> <!-- SubMenus -->
-          <!-- congreso -->
           <div id="subMenu1" class="collapse row" style="border-bottom: 1px solid gray;">
-            <div class="col bg-light">
-              <a href="senate-started-data.html" class="btn btn-sm btn-outline-none w-100 active">Datos del Senado</a>
+            <div class="col">
+              <a href="senate-started-data.html" class="btn btn-sm btn-outline-none w-100 " style="color: rgb(192, 188, 188);">Datos del Senado</a>
             </div>
             
             <div class="col">
               <a href="house-started-data.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Datos de la Camara</a>
             </div>
           </div>
-          <!-- Asistencia -->
+          
           <div id="subMenu2" class="collapse row" style="border-bottom: 1px solid gray;">
             <div class="col">
               <a href="senate-attendance-page.html" class="btn btn-sm btn-outlone-none w-100" style="color: rgb(192, 188, 188);">Asistencia del Senado</a>
@@ -75,14 +74,14 @@
               <a href="house-attendance-page.html" class="btn btn-sm btn-outlone-none w-100" style="color: rgb(192, 188, 188);">Asistencia de la Camara</a>
             </div>
           </div>
-          <!-- Lealtad -->
+
           <div id="subMenu3" class="collapse row" style="border-bottom: 1px solid gray;">
             <div class="col">
-              <a href="senate-loyalty.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Lealtad del Senado</a>
+              <a href="house-loyalty.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Lealtad del Senado</a>
             </div>
   
-            <div class="col">
-              <a href="house-loyalty.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Lealtad de la Camara</a>
+            <div class="col bg-light">
+                <a href="senate-loyalty.html" class="btn btn-sm btn-outline-none w-100 active">Lealtad de la Camara</a>
             </div>
           </div>
         </div>
@@ -92,44 +91,93 @@
 
     <div style="height: 150px;"></div>
 
-    <main class="container bg-light p-3">
-      <div class="container bg-light">
-        <p class="h2">SENADO</p>
-        <p class="p">Convocado por primera vez en 1789, la composición y los poderes del Senado se establecen en el Artículo Uno de la Constitución de los Estados Unidos. Cada estado está representado por dos senadores, independientemente de la población, que sirven términos escalonados de seis años. El Senado tiene varios poderes exclusivos no otorgados a la Cámara, incluido el consentimiento a los tratados como condición previa para su ratificación y el consentimiento o la confirmación de nombramientos de secretarios de gabinete, jueces federales, otros funcionarios ejecutivos federales, oficiales militares, funcionarios reguladores, embajadores y otros. funcionarios federales uniformados, así como el juicio de funcionarios federales acusados ​​por la Cámara.</p>
-      </div>
-      
-      <div class="json" id="resultado">
-        <!-- <div class="d-flex justify-content-end">
-          <div class="d-flex" id="estadoResult";">
+    <main class="container-md bg-light p-2" id="cGeneral">
+        <div class="d-lg-flex justify-content-evenly">
+          <div class="container">
+            <p class="h3">Lealtad del partido</p>
+            <p>Aquellos que se consideran partidarios fuertes, demócratas fuertes y republicanos fuertes, respectivamente, tienden a ser los más fieles al votar por el candidato de su partido para el cargo y la legislación que respalda la agenda de su partido.</p>
+            
           </div>
-        </div> -->
-        
-        <div class="accordion accordion-flush" id="acordeonUno">
-          <div class="accordion-item">
-            <div class="accordion-header" id="flushHead-uno">
-              <a href="#flushBody-Uno" class="accordion-button text-success bg-dark" data-toggle="collapse">
-                <p class="btn justify-content-end bg-success text-light my-2" id="estado"></p>
-                <p class="m-auto">Miembros del senado</p>
-              </a>
-            </div>
-            <div class="accordion-body collapse" id="flushBody-Uno">
-              <table class="table table-dark mx-auto my-3" id="senate-data">
-                <tr style="font-weight: lighter;">
-                  <th class="bg-success text-light" id="thNombre">Nombre Completo</th>
-                  <th class="bg-success text-light" id="thFiesta">partido</th>
-                  <th class="bg-success text-light" id="thEstado">Estado</th>
-                  <th class="bg-success text-light" id="thAntiguedad">Antigüedad</th>
-                  <th class="bg-success text-light" id="thPorcentaje">% Votos + % Añadido</th>
-                </tr>
-              </table>
-            </div>
+          
+          <!-- Tabla -->
+          <div class="container mx-auto">
+            <table class="table table-striped table-dark mx-auto my-3" id="" style="font-size: .85em;">
+              <tr>
+                <th class="" id="thPartido">Partido</th>
+                <th class="text-center" id="thRepresent">Nº Representantes</th>
+                <th class="text-center" id="thPctVotos">% Votos por Partido</th>
+              </tr>
+              <tr>
+                <td id="tdPartido">Republicanos</td>
+                <td id="tdMemRep">--</td>
+                <td id="tdVotRep">--</td>
+              </tr>
+              <tr>
+                <td id="tdPartido">Democratas</td>
+                <td id="tdMemDem">--</td>
+                <td id="tdVotDem">--</td>
+              </tr>
+              <tr>
+                <td id="tdPartido">Independientes</td>
+                <td id="tdMemInd">--</td>
+                <td id="tdVotInd">--</td>
+              </tr>
+            </table>
           </div>
         </div>
-      </div>
+
+        <div class="container">
+          <a href="#txtUno" class="text-info" data-toggle="collapse">••• Leer Mas •••</a><br>
+        </div>
+  
+        <div class="container collapse" id="txtUno"><br>
+          <div class="overflow-auto border p-2 w-100" style="height: 100px">
+            <p>El Senado utiliza votaciones nominales; un secretario dice en voz alta los nombres de todos los senadores y cada senador dice "sí" o "no" cuando se anuncia su nombre. La Cámara se reserva las votaciones nominales para los asuntos más formales, ya que una votación nominal de los 435 representantes lleva bastante tiempo; normalmente, los miembros votan por dispositivo electrónico. En caso de empate, la moción en cuestión falla. En el Senado, el Vicepresidente puede (si está presente) emitir el voto de desempate.</p>
+          </div>
+        </div>
+
+        <br><div class="bg-success" style="height: 1px;"></div><br>
+
+        <div class="d-lg-flex">
+          <div class="container">
+            <p class="h3 text-end">10% Más comprometidos</p>
+
+            <table class="table table-striped table-dark mx-auto my-3" id="tbMasLeales" style="font-size: .85em;">
+              <tr>
+                <th class="" id="ttMasL1">Elemento 1</th>
+                <th class="" id="ttMasL2">Elemento 2</th>
+                <th class="" id="ttMasL3">Elemento 3</th>
+              </tr>
+              <tr id="rowTxtMasL">
+                <td id="tdMasL1">None</td>
+                <td id="tdMasL2">--</td>
+                <td id="tdMasL3">--</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="container ">
+            <p class="h3 text-end">10% Menos comprometidos</p>
+
+            <table class="table table-striped table-dark mx-auto my-3" id="tbMenosLeales" style="font-size: .85em;">
+              <tr>
+                <th class="" id="ttMenosL1">Elemento 1</th>
+                <th class="" id="ttMenosL2">Elemento 2</th>
+                <th class="" id="ttMenosL3">Elemento 3</th>
+              </tr>
+              <tr id="rowTxtMenosL"> 
+                <td id="tdMenosL1">None</td>
+                <td id="tdMenosL2">--</td>
+                <td id="tdMenosL3">--</td>
+              </tr>
+            </table>
+          </div>
+        </div>
     </main>
     
     <br><br>
 
+    <!-- Pie de pagina -->
     <footer class="bg-dark container-fluid">
       <div class="bg-success row">
         <div class="d-flex">
@@ -142,7 +190,7 @@
       <div class="row d-flex">
 
           <div class="w-50" id="infoFooter">
-            <p class="py-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia a rem impedit ea eum, culpa numquam temporibus sapiente ipsum, modi dicta magni eius natus consequatur voluptatum blanditiis consectetur cumque.</p>
+            <p class="py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia a rem impedit ea eum, culpa numquam temporibus sapiente ipsum, modi dicta magni eius natus consequatur voluptatum blanditiis consectetur cumque.</p>
           </div>
 
           <div class="w-25">
@@ -190,10 +238,10 @@
     <script src="assets/js/particulas.js"></script>
 
     <!-- Archivos JSON ProCongress -->
-    <script src="assets/js/pro-congress-113-senate.js"></script>
+    <script src="assets/js/stats-house.js"></script>
 
     <!-- Archivo principal de JS -->    
-    <script src="assets/js/senate.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
   </body>
 </html>

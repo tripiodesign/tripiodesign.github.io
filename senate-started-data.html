@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -31,34 +31,34 @@
 
     <header class="fixed-top">
       <nav class="navbar-expand-md bg-dark">
-        <div class="row">
-          <div class="col col-md-2 d-flex align-items-center">
-            <div class="col"> <!-- Logo -->
-              <a href="index.html" class=""><img style="max-width: 70px;" src="assets/img/logo2-removebg-preview.png" alt="TGIF"></a>
-            </div>
-  
-            <div class="col col-sm-9 d-md-none"></div> <!-- Espacio -->
-  
-            <div class="col col-md d-flex flex-row-reverse align-items-center"> <!-- Boton y Mail -->
-              <a href="#menuBar" class="navbar-toggler btn btn-outline-success col py-2 m-1 text-center text-info" data-toggle="collapse" aria-expanded="false"><span class="icon-stack m-auto" style="font-size: 1,2em; font-weight: bold;"></span></a>
-  
-              <a href="mailto:info@tgif.net" class="btn btn-outline-info col m-1" style="font-size: 1.2em;"><span class="icon-mail"></span></a>
-            </div>
+        <div class="row px-1">
+
+          <div class="col-1"> <!-- Logo -->
+            <a href="index.html" class=""><img style="max-width: 70px;" src="assets/img/logo2-removebg-preview.png" alt="TGIF"></a>
+          </div>
+
+          <div class="col d-md-none"></div> <!-- Espacio -->
+
+          <div class="col-1  d-flex flex-row-reverse align-items-center"> <!-- Boton y Mail -->
+            <a href="#menuBar" class="navbar-toggler btn btn-outline-success col py-2 m-1 text-center text-info" data-toggle="collapse" aria-expanded="false"><span class="icon-stack m-auto" style="font-size: 1,2em; font-weight: bold;"></span></a>
+
+            <a href="mailto:info@tgif.net" class="btn btn-outline-info col m-1" style="font-size: 1.2em;"><span class="icon-mail"></span></a>
           </div>
   
           <div class="collapse navbar-collapse col-md" id="menuBar">
-            <a href="index.html" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);"><span class="icon-house_siding" style="font-size: 24px;"></span></a>
-            <a href="#subMenu1" class="btn btn-m btn-outline-success mx-auto col-12 col-md-2 active" data-toggle="collapse">Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
-            <a href="#subMenu2" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);" data-toggle="collapse">Asistencia <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
-            <a href="#subMenu3" class="btn btn-sm btn-outline-none mx-auto col-12 col-md-2" style="color: rgb(192, 188, 188);" data-toggle="collapse">Lealtades <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+            <a href="index.html" class="btn btn-sm btn-outline-none mx-1 col-12 col-md-1" style="color: rgb(192, 188, 188);"><span class="icon-house_siding" style="font-size: 24px;"></span></a>
+            <a href="#subMenu1" class="btn btn-m btn-outline-success mx-2 col-12 col-md active" data-toggle="collapse">Congreso <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+            <a href="#subMenu2" class="btn btn-sm btn-outline-none mx-2 col-12 col-md" style="color: rgb(192, 188, 188);" data-toggle="collapse">Asistencia <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
+            <a href="#subMenu3" class="btn btn-sm btn-outline-none mx-2 col-12 col-md" style="color: rgb(192, 188, 188);" data-toggle="collapse">Lealtades <span class="icon-keyboard_arrow_down" id="downArrow"></span></a>
           </div>
+          
         </div>
 
         <div class="bg-secondary"> <!-- SubMenus -->
           <!-- congreso -->
           <div id="subMenu1" class="collapse row" style="border-bottom: 1px solid gray;">
-            <div class="col bg-light">
-              <a href="senate-started-data.html" class="btn btn-sm btn-outline-none w-100 active">Datos del Senado</a>
+            <div class="col bg-warning">
+              <a href="senate-started-data.html" class="btn btn-sm btn-outline-none border-0 w-100" style="font-weight: bolder;">Datos del Senado</a>
             </div>
             
             <div class="col">
@@ -112,19 +112,32 @@
                 <p class="m-auto">Miembros del senado</p>
               </a>
             </div>
+            
             <div class="accordion-body collapse" id="flushBody-Uno">
-              <table class="table table-dark mx-auto my-3" id="senate-data">
-                <tr style="font-weight: lighter;">
-                  <th class="bg-success text-light" id="thNombre">Nombre Completo</th>
-                  <th class="bg-success text-light" id="thFiesta">partido</th>
-                  <th class="bg-success text-light" id="thEstado">Estado</th>
-                  <th class="bg-success text-light" id="thAntiguedad">Antigüedad</th>
-                  <th class="bg-success text-light" id="thPorcentaje">% Votos + % Añadido</th>
-                </tr>
-              </table>
+              
+              <div class="overflow-auto" style="height: 400px;">
+                <table class="table table-dark mx-auto my-3">
+                  <thead>
+                    <tr style="font-weight: lighter;">
+                      <th scope="col" class="bg-success text-light" id="thNombre">Nombre Completo</th>
+                      <th scope="col" class="bg-success text-light" id="thFiesta">partido</th>
+                      <th scope="col" class="bg-success text-light" id="thEstado">Estado</th>
+                      <th scope="col" class="bg-success text-light" id="thAntiguedad">Antigüedad</th>
+                      <th scope="col" class="bg-success text-light" id="thPorcentaje">% Votos + % Añadido</th>
+                    </tr>
+                  </thead>
+  
+                  <tbody id="senate-data">
+  
+                  </tbody>
+                </table>
+              </div>
+              
             </div>
+
           </div>
         </div>
+
       </div>
     </main>
     

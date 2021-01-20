@@ -5065,7 +5065,7 @@ function asistParty() {
   
   var votosRep = 0;
   var votosDem = 0;
-  var votosInd =0;
+  var votosInd = 0;
   
   var totalVotos = 0;
 

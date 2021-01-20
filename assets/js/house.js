@@ -29,7 +29,7 @@ if (datosHouse.status == 'OK') {
             tdPorcentajeUno.text(datosHouse.results[0].members[i].votes_with_party_pct + ' + ' + datosHouse.results[0].members[i].votes_against_party_pct);
 
             var ancore = $('<a>');
-            ancore.attr('href', datosHouse.results[0].members[i].url).text(nombreCompletoUno);
+            ancore.attr('href', datosHouse.results[0].members).text(nombreCompletoUno);
 
             tdNombreUno.append(ancore);
             ancore.addClass('text-info');

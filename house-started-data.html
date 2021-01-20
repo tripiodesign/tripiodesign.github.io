@@ -113,23 +113,21 @@
             </div>
             <div class="accordion-body collapse" id="flushBody-Uno">
               <div class="overflow-auto" style="height: 400px;">
-
-                <table class="table table-dark mx-auto my-3"  style="font-size: .85em;">
-                  <tHead>
+                <table class="table table-dark mx-auto my-3 border border-warning rounded" id="tablaHouse">
+                  <thead>
                     <tr style="font-weight: lighter;">
-                      <th scope="col" class="bg-success text-light" id="thNombre">Nombre Completo</th>
-                      <th scope="col" class="bg-success text-light" id="thFiesta">partido</th>
-                      <th scope="col" class="bg-success text-light" id="thEstado">Estado</th>
-                      <th scope="col" class="bg-success text-light" id="thAntiguedad">Antigüedad</th>
-                      <th scope="col" class="bg-success text-light" id="thPorcentaje">% Votos + % Añadido</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thNombre">Nombre Completo</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thFiesta">partido</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thEstado">Estado</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thAntiguedad">Antigüedad</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thPorcentaje">% Votos + % Añadido</th>
                     </tr>
-                  </tHead>
-
-                  <tBody id="house-data" >
-                    
-                  </tBody>
+                  </thead>
+  
+                  <tbody id="tbHouse">
+  
+                  </tbody>
                 </table>
-              
               </div>
             </div>
 
@@ -166,16 +164,16 @@
               <span class="icon-outgoing_mail"></span> info@tgif.com</a>
           </div>
 
-          <div class="d-flex justify-content-evenly align-items-center w-25">
-            <a href="" class="nav-link" id="rrss">
+          <div class="d-md-flex justify-content-evenly align-items-center m-auto w-25">
+            <a href="" class="nav-link text-center" id="rrss">
               <span class="icon-facebook5"></span>
             </a>
     
-            <a href="" class="nav-link" id="rrss">
+            <a href="" class="nav-link text-center" id="rrss">
               <span class="icon-twitter3"></span>
             </a>
     
-            <a href="" class="nav-link" id="rrss">
+            <a href="" class="nav-link text-center" id="rrss">
               <span class="icon-instagram1"></span>
             </a>
           </div>
@@ -194,16 +192,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
     <!-- JS para particulas -->
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/particulas.js"></script>
-
-    <!-- Archivos JSON ProCongress -->
-    <script src="assets/js/pro-congress-113-house.js"></script>
-
     <!-- Archivo principal de JS -->    
-    <script src="assets/js/house.js"></script>
+    <script src="assets/js/principal.js"></script>
 </body>
   </body>
 </html>

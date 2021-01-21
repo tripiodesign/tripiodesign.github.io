@@ -91,15 +91,15 @@
 
     <div style="height: 150px;"></div>
 
-    <main class="container bg-light p-3 mx-auto">
+    <main class="container bg-light p-3 mx-auto" id="appIndex">
       <a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment" class="nav-link btn btn-sm btn-outline-success" style="font-size: .8em; word-break: break-all;">https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment</a>
         <br>
       <div class="container">
         <div class="d-md-flex row justify-content-center w-100">
             <div class="col-lg-8">
-                <p class="h2">ACERCA DE NOSOTROS</p>
-                <p>La apertura, la responsabilidad y la honestidad definen la transparencia del gobierno. En una sociedad libre, la transparencia es la obligación del gobierno de compartir información con los ciudadanos. Está en el centro de cómo los ciudadanos hacen responsables a sus funcionarios públicos. Aquí en TGIF creemos que el gobierno debe ser transparente.</p>
-                <p>Los gobiernos existen para servir a la gente. La información sobre cómo los funcionarios llevan a cabo los negocios públicos y gastan el dinero de los contribuyentes debe estar disponible y fácilmente entendida. Esta transparencia permite una gobernanza buena y justa. La transparencia promueve la rendición de cuentas y brinda información a los ciudadanos sobre lo que está haciendo su gobierno.</p>
+                <h1>{{titulo}}</h1>
+                <p>{{parrafo.p1}}</p>
+                <p>{{parrafo.p2}}</p>
             </div>
     
             <div class="d-flex d-lg-block col m-auto">
@@ -194,6 +194,8 @@
     <!-- JS para particulas -->
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/particulas.js"></script>
+    <!-- Mis JS -->
+    <script src="assets/js/vue-main.js"></script>
 
 </body>
   </body>

@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="bg-secondary"> <!-- SubMenus -->
+        <div class="bg-dark"> <!-- SubMenus -->
           <div id="subMenu1" class="collapse row" style="border-bottom: 1px solid gray;">
             <div class="col">
               <a href="senate-started-data.html" class="btn btn-sm btn-outline-none w-100 " style="color: rgb(192, 188, 188);">Datos del Senado</a>
@@ -103,24 +103,24 @@
           <div class="container mx-auto">
             <table class="table table-striped table-dark mx-auto my-3" id="" style="font-size: .85em;">
               <tr>
-                <th class="" id="thPartido">Partido</th>
-                <th class="text-center" id="thRepresent">Nº Representantes</th>
-                <th class="text-center" id="thPctVotos">% Votos por Partido</th>
+                <th class="" id="thPartidoH">Partido</th>
+                <th class="text-center" id="thRepresentH">Nº Representantes</th>
+                <th class="text-center" id="thPctVotosH">% Votos por Partido</th>
               </tr>
               <tr>
-                <td id="tdPartido">Republicanos</td>
-                <td id="tdMemRep">--</td>
-                <td id="tdVotRep">--</td>
+                <td id="tdPartidoH">Republicanos</td>
+                <td id="tdMemRepH">--</td>
+                <td id="tdVotRepH">--</td>
               </tr>
               <tr>
-                <td id="tdPartido">Democratas</td>
-                <td id="tdMemDem">--</td>
-                <td id="tdVotDem">--</td>
+                <td id="tdPartidoH">Democratas</td>
+                <td id="tdMemDemH">--</td>
+                <td id="tdVotDemH">--</td>
               </tr>
               <tr>
-                <td id="tdPartido">Independientes</td>
-                <td id="tdMemInd">--</td>
-                <td id="tdVotInd">--</td>
+                <td id="tdPartidoH">Independientes</td>
+                <td id="tdMemIndH">--</td>
+                <td id="tdVotIndH">--</td>
               </tr>
             </table>
           </div>
@@ -142,35 +142,40 @@
           <div class="container">
             <p class="h3">10% Más comprometidos</p>
 
-            <table class="table table-striped table-dark mx-auto my-3" id="tbMasComp" style="font-size: .85em;">
-              <tr>
-                <th class="" id="ttMas1">Elemento 1</th>
-                <th class="" id="ttMas2">Elemento 2</th>
-                <th class="" id="ttMas3">Elemento 3</th>
-              </tr>
-              <tr>
-                <td id="tdUnoMas">None</td>
-                <td id="tdDosMas">--</td>
-                <td id="tdTresMas">--</td>
-              </tr>
-            </table>
+            <div class="overflow-auto" style="max-height: 400px;">
+              <table class="table table-striped table-dark mx-auto my-3" id="tbMasCompH" style="font-size: .85em;">
+                <tr>
+                  <th class="" id="ttMasH1">Elemento 1</th>
+                  <th class="" id="ttMasH2">Elemento 2</th>
+                  <th class="" id="ttMasH3">Elemento 3</th>
+                </tr>
+                
+                <tr>
+                  <td id="tdUnoMasH">None</td>
+                  <td id="tdDosMasH">--</td>
+                  <td id="tdTresMasH">--</td>
+                </tr>
+              </table>
+            </div>
           </div>
 
           <div class="container ">
             <p class="h3 text-right">10% Menos comprometidos</p>
-
-            <table class="table table-striped table-dark mx-auto my-3" id="tbMenosComp" style="font-size: .85em;">
-              <tr>
-                <th class="" id="ttMenos1">Elemento 1</th>
-                <th class="" id="ttMenos2">Elemento 2</th>
-                <th class="" id="ttMenos3">Elemento 3</th>
-              </tr>
-              <tr>
-                <td id="tdUnoMenos">None</td>
-                <td id="tdDosMenos">--</td>
-                <td id="tdTresMenos">--</td>
-              </tr>
-            </table>
+            
+            <div class="overflow-auto" style="max-height: 400px;">
+              <table class="table table-striped table-dark mx-auto my-3" id="tbMenosCompH" style="font-size: .85em;">
+                <tr>
+                  <th class="" id="ttMenosH1">Elemento 1</th>
+                  <th class="" id="ttMenosH2">Elemento 2</th>
+                  <th class="" id="ttMenosH3">Elemento 3</th>
+                </tr>
+                <tr>
+                  <td id="tdUnoMenosH">None</td>
+                  <td id="tdDosMenosH">--</td>
+                  <td id="tdTresMenosH">--</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
     </main>
@@ -232,16 +237,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
     <!-- JS para particulas -->
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/particulas.js"></script>
-
-    <!-- Archivos JSON ProCongress -->
-    <script src="assets/js/stats-house.js"></script>
-
     <!-- Archivo principal de JS -->    
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/principal.js"></script>
 </body>
   </body>
 </html>

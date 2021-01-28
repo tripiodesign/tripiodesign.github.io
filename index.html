@@ -27,7 +27,6 @@
     <title>HOME | TGIF</title>
 </head>
 <body>
-    <div class="container-fluid" id="particles-js" style="background-color: black; min-height: 100vh; position: fixed; z-index: -10;"></div>
 
     <header class="fixed-top">
       <nav class="navbar-expand-md bg-dark">
@@ -91,25 +90,25 @@
 
     <div style="height: 150px;"></div>
 
-    <main class="container bg-light p-3 mx-auto" id="appIndex">
+    <main class="container bg-light p-3 mx-auto" id="app">
       <a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment" class="nav-link btn btn-sm btn-outline-success" style="font-size: .8em; word-break: break-all;">https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment</a>
         <br>
       <div class="container">
         <div class="d-md-flex row justify-content-center w-100">
             <div class="col-lg-8">
-                <h1>{{titulo}}</h1>
-                <p>{{parrafo.p1}}</p>
-                <p>{{parrafo.p2}}</p>
+              <h1>{{arrIndex[0].titulo}}</h1>
+              <p>{{arrIndex[0].texto1}}</p>
+              <p>{{arrIndex[0].texto2}}</p>
             </div>
     
             <div class="d-flex d-lg-block col m-auto">
-                <img src="assets/img/imagen1-removebg-preview.png" class="m-auto" alt="Search">
+              <img src="assets/img/imagen1-removebg-preview.png" class="m-auto" alt="Search">
             </div>
         </div>
         
         <div class="col">
-          <p>También creemos que el gobierno debe ser participativo. La participación pública aumenta la eficacia del gobierno y mejora la calidad de sus decisiones. El conocimiento está muy disperso en la sociedad y los funcionarios públicos se benefician de tener acceso a ese conocimiento disperso. Lo invitamos a utilizar nuestro sitio para participar activamente en el gobierno estadounidense.</p>
-          <p>TGIF trabaja para divulgar información en formas que el público pueda encontrar y usar fácilmente. Solicitamos comentarios del público para identificar la información de mayor utilidad para el público.</p>
+          <p>{{arrIndex[0].texto1}}</p>
+          <p>{{arrIndex[0].texto1}}</p>
         </div>
         <br>
             
@@ -121,11 +120,11 @@
 
                 <div class="accordion-body collapse" id="flushBody-Dos">
                     <div class="overflow-auto border-bottom border-start border-end p-1" style="max-height: 400px;">
-                      <p class="h3">ANTECEDENTES DE LA TRANSPARENCIA GUBERNAMENTAL</p>
-                      <p>En Occidente, la idea de que el gobierno debería estar abierto al escrutinio público y susceptible a la opinión pública se remonta al menos a la época de la Ilustración, cuando muchos filósofos atacaron la doctrina absolutista del secreto de Estado, una parte fundamental de su proyecto intelectual. . La aprobación de instrumentos legislativos formales con este fin también se puede rastrear hasta este momento con Suecia, por ejemplo, (que entonces incluía a Finlandia como un territorio gobernado por Suecia) promulgando leyes de libertad de prensa como parte de su constitución (Ley de Libertad de Prensa, 1766). Este enfoque, y el de los philosophes en general, está fuertemente relacionado con la historiografía reciente sobre la esfera pública del siglo XVIII.</p>
-                      <p>Influenciada por el pensamiento ilustrado, las revoluciones en América (1776) y Francia (1789), la libertad de prensa consagró disposiciones y requisitos para la contabilidad presupuestaria pública y la libertad de prensa en artículos constitucionales. En el siglo XIX, varios políticos y escritores liberales eminentes se opusieron enérgicamente a los intentos de los estadistas metterniqueos de refutar estas medidas, entre los que destacan Bentham, Mill y Acton.</p>
-                      <p>En general, se considera que el gobierno abierto es un sello distintivo de la práctica democrática contemporánea y, a menudo, está vinculado a la aprobación de leyes sobre libertad de información. Los países escandinavos afirman haber adoptado la primera legislación sobre libertad de información, que remonta los orígenes de sus disposiciones modernas al siglo XVIII y Finlandia continúa con la presunción de apertura después de obtener la independencia en 1917, aprobando su Ley de publicidad de documentos oficiales en 1951 (reemplazada por nueva legislación en 1999).</p>
-                      <p>Estados Unidos aprobó su Ley de Libertad de Información (FOIA) en 1966, las FOIA, las leyes de acceso a la información (AIA) o leyes equivalentes se aprobaron en Dinamarca y Noruega en 1970.</p>
+                      <h3>{{arrIndex[1].subTitle1}}</h3>
+                      <p>{{arrIndex[1].texto1}}</p>
+                      <p>{{arrIndex[1].texto2}}</p>
+                      <p>{{arrIndex[1].texto3}}</p>
+                      <p>{{arrIndex[1].texto4}}</p>
                     </div>
                 </div>
             </div>

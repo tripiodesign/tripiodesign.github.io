@@ -1,10 +1,5 @@
-var urlSenado = 'https://api.propublica.org/congress/v1/113/senate/members.json'
-var urlHouse = 'https://api.propublica.org/congress/v1/113/house/members.json'
 
-var initUno = {
-    method: 'GET',
-    headers: new Headers({ "X-API-Key" : "60kWuPbuIh4ZzR4popW7WN81llwUmDGGNUZN5dCK" })
-};
+
 
 // Paginas Started | Senate | House |
 

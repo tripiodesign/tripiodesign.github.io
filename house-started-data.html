@@ -91,24 +91,21 @@
 
     <div style="height: 150px;"></div>
 
-    <main class="container bg-light p-3">
+    <main class="container bg-light p-3" id="app">
       <div class="container bg-light">
-        <p class="h2">CONGRESO</p>
-        <p class="p">El poder principal de la Cámara es aprobar leyes federales que afecten a todo el país, aunque sus proyectos de ley también deben ser aprobados por el Senado y acordados por el presidente de los Estados Unidos antes de convertirse en ley (a menos que tanto la Cámara como el Senado vuelvan a aprobar la legislación). con una mayoría de dos tercios en cada cámara). La Cámara tiene algunos poderes exclusivos: el poder de iniciar proyectos de ley de ingresos, acusar a los funcionarios (los funcionarios acusados ​​son posteriormente juzgados en el Senado) y elegir al presidente de los Estados Unidos en caso de que no haya mayoría en el Colegio Electoral.</p>
-        <p class="p">Cada estado de EE. UU. Está representado en la Cámara en proporción a su población medida en el censo, pero cada estado tiene derecho a al menos un representante.</p>      </div>
+        <h1>{{textos[0].titulo3}}</h1>
+        <p>{{textos[2].pCamara1}}</p>
+        <p>{{textos[2].pCamara2}}</p>
+      </div>
       
       <div class="json" id="resultado">
-        <!-- <div class="d-flex justify-content-end">
-          <div class="d-flex" id="estadoResult";">
-          </div>
-        </div> -->
         
         <div class="accordion accordion-flush" id="acordeonUno">
           <div class="accordion-item">
             <div class="accordion-header" id="flushHead-uno">
-              <a href="#flushBody-Uno" class="accordion-button text-success bg-dark" data-toggle="collapse">
-                <p class="btn justify-content-end bg-success text-light my-2" id="estado"></p>
-                <p class="m-auto">Miembros de la Camara</p>
+              <a href="#flushBody-Uno" class="accordion-button text-success text-center bg-dark" data-toggle="collapse">
+                <p class="btn justify-content-end bg-success text-light my-2" id="estado">{{statusHouse}}</p>
+                <h5 class="m-auto">{{textos[1].subTitle3}}</h5>
               </a>
             </div>
             <div class="accordion-body collapse" id="flushBody-Uno">
@@ -124,8 +121,16 @@
                     </tr>
                   </thead>
   
-                  <tbody id="tbHouse">
-  
+                  <tbody>
+                    <tr v-for='diputado in diputados' class="text-center">
+                      <td>{{diputado.first_name}} {{diputado.last_name}}</td>
+                      <td>{{diputado.party}}</td>
+                      <td>{{diputado.state}}</td>
+                      <td>{{diputado.seniority}}</td>
+                      <td>
+                          {{diputado.votes_with_party_pct}}% + {{diputado.votes_against_party_pct}}% ({{diputado.votes_with_party_pct + diputado.votes_against_party_pct}}%)
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -188,15 +193,18 @@
 
 
     
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- JS para particulas -->
-    <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/particulas.js"></script>
-    <!-- Archivo principal de JS -->    
-    <script src="assets/js/principal.js"></script>
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Libreria VueJs -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+     <!-- JS para particulas -->
+     <script src="assets/js/particles.min.js"></script>
+     <script src="assets/js/particulas.js"></script>
+     <!-- Mis JS -->
+     <script src="assets/js/vue-main.js"></script>
 </body>
   </body>
 </html>

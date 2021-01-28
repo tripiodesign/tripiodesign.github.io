@@ -77,11 +77,11 @@
 
           <div id="subMenu3" class="collapse row" style="border-bottom: 1px solid gray;">
             <div class="col">
-              <a href="house-loyalty.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Lealtad del Senado</a>
+              <a href="senate-loyalty.html" class="btn btn-sm btn-outline-none w-100" style="color: rgb(192, 188, 188);">Lealtad del Senado</a>
             </div>
   
             <div class="col bg-warning">
-                <a href="senate-loyalty.html" class="btn btn-sm btn-outline-none border-0 w-100 ">Lealtad de la Camara</a>
+                <a href="house-loyalty.html" class="btn btn-sm btn-outline-none border-0 w-100 ">Lealtad de la Camara</a>
             </div>
           </div>
         </div>
@@ -91,93 +91,97 @@
 
     <div style="height: 150px;"></div>
 
-    <main class="container-md bg-light p-2" id="cGeneral">
-        <div class="d-lg-flex justify-content-evenly">
-          <div class="container">
-            <p class="h3">Lealtad del partido</p>
-            <p>Aquellos que se consideran partidarios fuertes, demócratas fuertes y republicanos fuertes, respectivamente, tienden a ser los más fieles al votar por el candidato de su partido para el cargo y la legislación que respalda la agenda de su partido.</p>
-            
-          </div>
+    <main class="container-md bg-light p-2" id="app">
+      <div class="d-lg-flex justify-content-evenly">
+        <div class="container">
+          <p class="h3">Lealtad del partido</p>
+          <p>Aquellos que se consideran partidarios fuertes, demócratas fuertes y republicanos fuertes, respectivamente, tienden a ser los más fieles al votar por el candidato de su partido para el cargo y la legislación que respalda la agenda de su partido.</p>
           
-          <!-- Tabla -->
-          <div class="container mx-auto">
-            <table class="table table-striped table-dark mx-auto my-3" id="" style="font-size: .85em;">
+        </div>
+        
+        <!-- Tabla -->
+        <div class="container mx-auto">
+          <table class="table table-striped table-dark mx-auto my-3" id="" style="font-size: .85em;">
+            <tr>
+              <th class="">Partido</th>
+              <th class="text-center">Nº Representantes</th>
+              <th class="text-center">% Votos por Partido</th>
+            </tr>
+            <tr>
+              <td id="tdPartido">Republicanos</td>
+              <td class="text-center">{{cantRepH}}</td>
+              <td class="text-center">{{pctVotosRepH}}%</td>
+            </tr>
+            <tr>
+              <td id="tdPartido">Democratas</td>
+              <td class="text-center">{{cantDemH}}</td>
+              <td class="text-center">{{pctVotosRepH}}%</td>
+            </tr>
+            <tr>
+              <td id="tdPartido">Independientes</td>
+              <td class="text-center">{{cantIndH}}</td>
+              <td class="text-center">{{pctVotosIndH}}%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="container">
+        <a href="#txtUno" class="text-info" data-toggle="collapse">••• Leer Mas •••</a><br>
+      </div>
+
+      <div class="container collapse" id="txtUno"><br>
+        <div class="overflow-auto border p-2 w-100" style="height: 100px">
+          <p>El Senado utiliza votaciones nominales; un secretario dice en voz alta los nombres de todos los senadores y cada senador dice "sí" o "no" cuando se anuncia su nombre. La Cámara se reserva las votaciones nominales para los asuntos más formales, ya que una votación nominal de los 435 representantes lleva bastante tiempo; normalmente, los miembros votan por dispositivo electrónico. En caso de empate, la moción en cuestión falla. En el Senado, el Vicepresidente puede (si está presente) emitir el voto de desempate.</p>
+        </div>
+      </div>
+
+      <br><div class="bg-success" style="height: 1px;"></div><br>
+
+      <div class="d-lg-flex">
+        <div class="container">
+          <p class="h3 text-end">10% Más Leales</p>
+
+          <table class="table table-striped table-dark mx-auto my-3" id="" style="font-size: .85em;">
+            <thead>
               <tr>
-                <th class="" id="thPartido">Partido</th>
-                <th class="text-center" id="thRepresent">Nº Representantes</th>
-                <th class="text-center" id="thPctVotos">% Votos por Partido</th>
+                <th class="">Nombre</th>
+                <th class="text-center">Votos Totales</th>
+                <th class="text-center">(%) Votos x Partido</th>
               </tr>
-              <tr>
-                <td id="tdPartido">Republicanos</td>
-                <td id="tdMemRep">--</td>
-                <td id="tdVotRep">--</td>
+            </thead>
+            <tbody>
+              <tr v-for='masLeal in masLealHouse'>
+                <td class="">{{masLeal.first_name}} {{masLeal.last_name}}</td>
+                <td class="text-center">{{masLeal.total_votes}}</td>
+                <td class="text-center">{{masLeal.votes_with_party_pct}}%</td>
               </tr>
-              <tr>
-                <td id="tdPartido">Democratas</td>
-                <td id="tdMemDem">--</td>
-                <td id="tdVotDem">--</td>
-              </tr>
-              <tr>
-                <td id="tdPartido">Independientes</td>
-                <td id="tdMemInd">--</td>
-                <td id="tdVotInd">--</td>
-              </tr>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
 
         <div class="container">
-          <a href="#txtUno" class="text-info" data-toggle="collapse">••• Leer Mas •••</a><br>
+          <p class="h3 text-end">10% Menos Leales</p>
+
+          <table class="table table-striped table-dark mx-auto my-3" style="font-size: .85em;">
+            <thead>
+              <tr>
+                <th class="">Nombre</th>
+                <th class="text-center">Votos Totales</th>
+                <th class="text-center">(%) Votos x Partido</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for='minLeal in minLealHouse'>
+                <td class="">{{minLeal.first_name}} {{minLeal.last_name}}</td>
+                <td class="text-center">{{minLeal.missed_votes}}</td>
+                <td class="text-center">{{minLeal.missed_votes_pct}}%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-  
-        <div class="container collapse" id="txtUno"><br>
-          <div class="overflow-auto border p-2 w-100" style="height: 100px">
-            <p>El Senado utiliza votaciones nominales; un secretario dice en voz alta los nombres de todos los senadores y cada senador dice "sí" o "no" cuando se anuncia su nombre. La Cámara se reserva las votaciones nominales para los asuntos más formales, ya que una votación nominal de los 435 representantes lleva bastante tiempo; normalmente, los miembros votan por dispositivo electrónico. En caso de empate, la moción en cuestión falla. En el Senado, el Vicepresidente puede (si está presente) emitir el voto de desempate.</p>
-          </div>
-        </div>
-
-        <br><div class="bg-success" style="height: 1px;"></div><br>
-
-        <div class="d-lg-flex">
-          <div class="container">
-            <p class="h3 text-end">10% Más comprometidos</p>
-
-            <div class="overflow-auto" style="max-height: 400px;">
-              <table class="table table-striped table-dark mx-auto my-3" id="tbMasLealesH" style="font-size: .85em;">
-                <tr>
-                  <th class="" id="ttMasLH1">Elemento 1</th>
-                  <th class="" id="ttMasLH2">Elemento 2</th>
-                  <th class="" id="ttMasLH3">Elemento 3</th>
-                </tr>
-                <tr id="rowTxtMasLH">
-                  <td id="tdMasLH1">None</td>
-                  <td id="tdMasLH2">--</td>
-                  <td id="tdMasLH3">--</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-
-          <div class="container ">
-            <p class="h3 text-end">10% Menos comprometidos</p>
-
-            <div class="overflow-auto" style="max-height: 400px;">
-              <table class="table table-striped table-dark mx-auto my-3" id="tbMenosLealesH" style="font-size: .85em;">
-                <tr>
-                  <th class="" id="ttMenosLH1">Elemento 1</th>
-                  <th class="" id="ttMenosLH2">Elemento 2</th>
-                  <th class="" id="ttMenosLH3">Elemento 3</th>
-                </tr>
-                <tr id="rowTxtMenosLH"> 
-                  <td id="tdMenosLH1">None</td>
-                  <td id="tdMenosLH2">--</td>
-                  <td id="tdMenosLH3">--</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-    </main>
+      </div>
+  </main>
     
     <br><br>
 
@@ -233,19 +237,17 @@
 
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <!-- Libreria VueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- JS para particulas -->
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/particulas.js"></script>
-
-    <!-- Archivos JSON ProCongress -->
-    <script src="assets/js/stats-house.js"></script>
-
-    <!-- Archivo principal de JS -->    
-    <script src="assets/js/principal.js"></script>
+    <!-- Mis JS -->
+    <script src="assets/js/vue-main.js"></script>
 </body>
   </body>
 </html>

@@ -92,24 +92,19 @@
 
     <div style="height: 150px;"></div>
 
-    <main class="container bg-light p-3">
+    <main class="container bg-light p-3" id="app">
       <div class="container bg-light">
-        <p class="h2">SENADO</p>
-        <p class="p">Convocado por primera vez en 1789, la composición y los poderes del Senado se establecen en el Artículo Uno de la Constitución de los Estados Unidos. Cada estado está representado por dos senadores, independientemente de la población, que sirven términos escalonados de seis años. El Senado tiene varios poderes exclusivos no otorgados a la Cámara, incluido el consentimiento a los tratados como condición previa para su ratificación y el consentimiento o la confirmación de nombramientos de secretarios de gabinete, jueces federales, otros funcionarios ejecutivos federales, oficiales militares, funcionarios reguladores, embajadores y otros. funcionarios federales uniformados, así como el juicio de funcionarios federales acusados ​​por la Cámara.</p>
+        <h1>{{textos[0].titulo2}}</h1>
+        <p>{{textos[2].pSenado1}}</p>
       </div>
       
       <div class="json" id="resultado">
-        <!-- <div class="d-flex justify-content-end">
-          <div class="d-flex" id="estadoResult";">
-          </div>
-        </div> -->
-        
         <div class="accordion accordion-flush" id="acordeonUno">
           <div class="accordion-item">
             <div class="accordion-header" id="flushHead-uno">
               <a href="#flushBody-Uno" class="accordion-button text-success bg-dark" data-toggle="collapse">
-                <p class="btn justify-content-end bg-success text-light my-2" id="estado"></p>
-                <p class="m-auto">Miembros del senado</p>
+                <p class="btn justify-content-end bg-success text-light my-2" id="estado">{{statusSenado}}</p>
+                <h5 class="m-auto">{{textos[1].subTitle2}}</h5>
               </a>
             </div>
             
@@ -119,16 +114,24 @@
                 <table class="table table-dark mx-auto my-3 border border-warning rounded" id="tablaSenado">
                   <thead>
                     <tr style="font-weight: lighter;">
-                      <th scope="col" class="bg-success text-light text-center" id="thNombre">Nombre Completo</th>
-                      <th scope="col" class="bg-success text-light text-center" id="thFiesta">partido</th>
-                      <th scope="col" class="bg-success text-light text-center" id="thEstado">Estado</th>
-                      <th scope="col" class="bg-success text-light text-center" id="thAntiguedad">Antigüedad</th>
-                      <th scope="col" class="bg-success text-light text-center" id="thPorcentaje">% Votos + % Añadido</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thNombre">{{tabla[0].thTabla1}}</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thFiesta">{{tabla[0].thTabla2}}</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thEstado">{{tabla[0].thTabla3}}</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thAntiguedad">{{tabla[0].thTabla4}}</th>
+                      <th scope="col" class="bg-success text-light text-center" id="thPorcentaje">{{tabla[0].thTabla5}}</th>
                     </tr>
                   </thead>
   
-                  <tbody id="tbSenado">
-  
+                  <tbody>
+                    <tr v-for='senador in senadores' class="text-center">
+                      <td>{{senador.first_name}} {{senador.last_name}}</td>
+                      <td>{{senador.party}}</td>
+                      <td>{{senador.state}}</td>
+                      <td>{{senador.seniority}}</td>
+                      <td>
+                          {{senador.votes_with_party_pct}}% + {{senador.votes_against_party_pct}}% ({{senador.votes_with_party_pct + senador.votes_against_party_pct}}%)
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -199,13 +202,13 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- vue -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+    <!-- Libreria VueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- JS para particulas -->
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/particulas.js"></script>
-    <!-- Archivo principal de JS -->    
-    <script src="assets/js/principal.js"></script>
+    <!-- Mis JS -->
+    <script src="assets/js/vue-main.js"></script>
 </body>
   </body>
 </html>
